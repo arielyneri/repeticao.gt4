@@ -51,5 +51,29 @@ function menorEMaiorAltura() {
 }
 
 function mediaAritmetica() {
-    
+
+    let soma = 0;
+    let positivos = 0;
+    let negativos = 0;
+    let quantidade = 0;
+    let valor = 10;
+
+    while(valor >= -7) {
+        console.log(valor);
+        soma += valor;
+        quantidade++
+
+        if (valor > 0) {
+            positivos++
+        } else if (valor < 0) {
+            negativos++
+        }
+        valor -= 1;
+    }
+    console.log(`
+        Acumulado: ${soma}
+        Média: ${(soma/quantidade).toFixed(2)}
+        Percentual Positivo: ${(positivos * 1000/quantidade).toFixed(2)}
+        Percentual Negativo: ${(negativos * 100/quantidade).toFixed(2)}
+        `)
 }
